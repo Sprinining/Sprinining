@@ -14,3 +14,14 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+```java
+Developer dev = new Developer("Ezra");
+
+while (dev.isInFrontOfComputer()) {
+    dev.openChromeBrowser();
+    dev.copyCodeFromStackOverflow();
+    dev.pasteCodeInIDE();
+    dev.feelLikeAProfessionalDeveloper();
+}
+```
