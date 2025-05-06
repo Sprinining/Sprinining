@@ -16,7 +16,7 @@ Here are some ideas to get you started:
 -->
 
 ```java
-Developer dev = new Developer("Ezra");
+Developer dev = new Developer("Sylvan Vale");
 
 while (dev.isInFrontOfComputer()) {
     dev.openChromeBrowser();
