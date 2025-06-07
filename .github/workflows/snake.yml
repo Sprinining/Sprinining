@@ -1,7 +1,6 @@
 name: Generate GitHub Contribution Snake
 
 on:
-  # 每天凌晨 1 点自动运行（你也可以手动触发）
   schedule:
     - cron: "0 1 * * *"
   workflow_dispatch:
@@ -20,6 +19,7 @@ jobs:
           theme: github-dark
           color_snake: '#00ffcc'
           color_dots: '#111111,#333333,#555555,#777777,#999999'
+          color_empty: '#121212'      # 这里改无提交格子的颜色为暗色
           gif_quality: 90
           frame_duration: 150
           hide_title: true
