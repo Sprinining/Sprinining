@@ -1,45 +1,35 @@
-name: Generate GitHub Contribution Snake
+name: Generate Contribution Snake
 
 on:
-  schedule:
-    - cron: '0 0 * * *'    # 每天 UTC 零点运行一次
-  workflow_dispatch:       # 支持手动触发
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Generate Contribution Snake
-        uses: Platane/snk@v3
+      - name: Generate contribution snake
+        uses: platane/snk@v3
         with:
-          github_user_name: Sprinining            # 你的 GitHub 用户名
+          github_user_name: Sprinining
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake.gif
           theme: github-dark
-          color_snake: '#00ffcc'                  # 蛇的颜色
-          color_dots: '#000000,#111111,#222222,#333333,#444444'  # 更暗的背景方块色
+          color_snake: '#00ffcc'
+          color_dots: '#111111,#333333,#555555,#777777,#999999'
           gif_quality: 90
           frame_duration: 150
           hide_title: true
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+      - name: Upload contribution snake artifacts
+        uses: actions/upload-artifact@v4
         with:
           name: contribution-snake
           path: dist/
-
-      - name: Commit and Push changes
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake.gif
-          git commit -m "Update contribution snake"
-          git push
-        env:
-          # 这里确保用的是你的 GitHub Token
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
