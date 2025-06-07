@@ -25,3 +25,5 @@ while (dev.isInFrontOfComputer()) {
     dev.feelLikeAProfessionalDeveloper();
 }
 ```
+
+![Snake](https://github.com/Sprinining/Sprinining/blob/output/github-contribution-grid-snake.svg)
