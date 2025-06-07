@@ -1,23 +1,30 @@
-name: Generate Snake Animation
+name: Generate GitHub Contribution Snake
 
 on:
+  # 每天凌晨 1 点自动运行（你也可以手动触发）
   schedule:
-    - cron: "0 0 * * *"  # 每天 UTC 0 点运行
-  workflow_dispatch:     # 支持手动触发
+    - cron: "0 1 * * *"
+  workflow_dispatch:
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate the snake animation
+      - name: Generate snake animation
         uses: Platane/snk@v3
         with:
           github_user_name: Sprinining
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake.gif
+          theme: github-dark
+          color_snake: '#00ffcc'
+          color_dots: '#111111,#333333,#555555,#777777,#999999'
+          gif_quality: 90
+          frame_duration: 150
+          hide_title: true
 
-      - name: Push to the output branch
+      - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
