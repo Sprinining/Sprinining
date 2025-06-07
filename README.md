@@ -26,4 +26,20 @@ while (dev.isInFrontOfComputer()) {
 }
 ```
 
-![Snake](https://github.com/Sprinining/Sprinining/blob/output/github-contribution-grid-snake.svg)
+### 🧑‍💻 GitHub Stats
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sprinining&layout=compact&theme=github_dark)
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=Sprinining&show_icons=true&theme=github_dark)
+
+---
+
+### 📈 Contribution Graph
+
+![Activity Graph](https://github-readme-activity-graph.cyclic.app/graph?username=Sprinining&theme=github-dark)
+
+---
+
+### 🐍 GitHub Contribution Snake
+
+![Snake animation](https://raw.githubusercontent.com/Sprinining/Sprinining/output/github-contribution-grid-snake.svg)
+
