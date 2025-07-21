@@ -22,34 +22,12 @@ Here are some ideas to get you started:
 class Learner {
 public:
     void learn(const std::string& concept) {
-        std::cout << "[Starting to explore new concept] — " << concept << std::endl;
-        askWhat(concept);
-        askWhyImportant(concept);
-        askWhyLearn(concept);
-        askWhenToUse(concept);
-        askHowItWorks(concept);
-        std::cout << "[Exploration complete]\n" << std::endl;
-    }
-
-private:
-    void askWhat(const std::string& concept) {
-        std::cout << "1. What is " << concept << "?" << std::endl;
-    }
-
-    void askWhyImportant(const std::string& concept) {
-        std::cout << "2. Why is " << concept << " important?" << std::endl;
-    }
-
-    void askWhyLearn(const std::string& concept) {
-        std::cout << "3. Why should I learn " << concept << "?" << std::endl;
-    }
-
-    void askWhenToUse(const std::string& concept) {
-        std::cout << "4. When will I use " << concept << "?" << std::endl;
-    }
-
-    void askHowItWorks(const std::string& concept) {
-        std::cout << "5. How does " << concept << " work?" << std::endl;
+        std::cout << "What is " << concept << "?" << std::endl;
+        std::cout << "Why is it important?" << std::endl;
+        std::cout << "Why should I learn it?" << std::endl;
+        std::cout << "When will I use it?" << std::endl;
+        std::cout << "How does it work?" << std::endl;
+        std::cout << std::endl;
     }
 };
 ```
